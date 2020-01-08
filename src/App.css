@@ -1,7 +1,10 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 :root {
   --primaryColor: #af9a7d;
@@ -61,6 +64,8 @@ h6 {
   background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
   transition: var(--mainTransition);
   text-transform: uppercase;
   cursor: pointer;
@@ -98,8 +103,12 @@ h6 {
   z-index: 1;
 }
 .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .nav-btn {
   background: transparent;
@@ -114,6 +123,8 @@ h6 {
 .nav-links {
   height: 0;
   overflow: hidden;
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
   transition: var(--mainTransition);
   list-style-type: none;
 }
@@ -122,6 +133,8 @@ h6 {
   text-decoration: none;
   padding: 1rem 0;
   color: var(--mainBlack);
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
@@ -142,10 +155,14 @@ h6 {
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .nav-links {
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 4rem;
   }
@@ -160,9 +177,15 @@ h6 {
 .roomsHero {
   min-height: calc(100vh - 66px);
   background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .roomsHero {
   background-image: url("./images/room-2.jpeg");
@@ -239,6 +262,7 @@ h6 {
 .services-center {
   width: 90vw;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-row-gap: 2rem;
@@ -278,6 +302,7 @@ h6 {
 .featured-rooms-center {
   width: 80vw;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-row-gap: 2rem;
@@ -298,11 +323,15 @@ h6 {
 /* end pf featured rooms */
 /* room */
 .room {
-  box-shadow: var(--lightShadow);
+  -webkit-box-shadow: var(--lightShadow);
+          box-shadow: var(--lightShadow);
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
   transition: var(--mainTransition);
 }
 .room:hover {
-  box-shadow: var(--darkShadow);
+  -webkit-box-shadow: var(--darkShadow);
+          box-shadow: var(--darkShadow);
 }
 
 .img-container {
@@ -311,6 +340,8 @@ h6 {
 .img-container img {
   width: 100%;
   display: block;
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
   transition: var(--mainTransition);
 }
 .price-top {
@@ -323,6 +354,8 @@ h6 {
   border-bottom-right-radius: 1rem;
   font-size: 0.5rem;
   text-align: center;
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
   transition: var(--mainTransition);
 }
 .price-top h6 {
@@ -335,7 +368,11 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .img-container:hover {
@@ -348,7 +385,9 @@ h6 {
   opacity: 0;
 }
 .img-container:hover .room-link {
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
   background: var(--darkGrey);
@@ -367,6 +406,7 @@ h6 {
 .single-room-images {
   width: 80vw;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-row-gap: 2rem;
@@ -378,7 +418,9 @@ h6 {
 }
 .single-room-info {
   width: 80vw;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   margin: 2rem auto;
 }
@@ -412,6 +454,7 @@ h6 {
 }
 .extras {
   list-style-type: none;
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-column-gap: 2rem;
@@ -425,7 +468,9 @@ h6 {
     max-width: 1170px;
   }
   .single-room-info {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
   }
@@ -441,6 +486,7 @@ h6 {
 .roomslist-center {
   width: 80vw;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-row-gap: 2rem;
@@ -466,6 +512,7 @@ h6 {
 .filter-form {
   width: 60vw;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
   grid-row-gap: 2rem;
@@ -485,6 +532,8 @@ h6 {
   font-size: 1rem;
 }
 .size-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .size-input {
