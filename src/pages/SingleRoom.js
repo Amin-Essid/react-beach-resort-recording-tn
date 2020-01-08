@@ -1,4 +1,4 @@
-import 'react-app-polyfill/ie9';
+
 import React, { Component } from 'react';
 import defaultBcg from "../images/room-1.jpeg";
 import Banner from "../Components/Banner";
